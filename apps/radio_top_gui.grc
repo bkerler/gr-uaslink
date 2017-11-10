@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?grc format='1' created='3.7.12'?>
 <flow_graph>
-  <timestamp>Mon Nov  6 14:47:13 2017</timestamp>
+  <timestamp>Mon Nov  6 14:40:03 2017</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -14,7 +14,7 @@
     </param>
     <param>
       <key>category</key>
-      <value>[uaslink]</value>
+      <value>[GRC Hier Blocks]</value>
     </param>
     <param>
       <key>comment</key>
@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>hb_qt_gui</value>
+      <value>qt_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>psk_burst_tx_wrapper</value>
+      <value>radio_top_gui</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -90,22 +90,11 @@
     </param>
   </block>
   <block>
-    <key>burst_framer</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bs</key>
-      <value>1024</value>
-    </param>
+    <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
+      <value>A place to put values for various configurations.
+Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -113,7 +102,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 116)</value>
+      <value>(612, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -121,29 +110,17 @@
     </param>
     <param>
       <key>id</key>
-      <value>burst_framer_0</value>
+      <value>cfg</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
+      <key>value</key>
+      <value>{"base":{"freqs":[freqs[0],freqs[1]]},"remote":{"freqs":[freqs[1],freqs[0]]} }[config]</value>
     </param>
   </block>
   <block>
-    <key>burst_preamble_insert</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
+    <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -152,7 +129,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(540, 116)</value>
+      <value>(460, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -160,33 +137,17 @@
     </param>
     <param>
       <key>id</key>
-      <value>burst_preamble_insert_0</value>
+      <value>freqs</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>pre</key>
-      <value>pre_bits</value>
+      <key>value</key>
+      <value>[2.405e9,2.35e9]</value>
     </param>
   </block>
   <block>
-    <key>burst_randomizer</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
+    <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -195,7 +156,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(340, 102)</value>
+      <value>(276, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -203,31 +164,19 @@
     </param>
     <param>
       <key>id</key>
-      <value>burst_randomizer_0</value>
+      <value>samp_rate</value>
     </param>
     <param>
-      <key>iv</key>
-      <value>[1,0,0,1,0,1,0,1,0,0,0,0,0,0,0]</value>
-    </param>
-    <param>
-      <key>ml</key>
-      <value>100000</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>p</key>
-      <value>[0,14,15]</value>
+      <key>value</key>
+      <value>500e3</value>
     </param>
   </block>
   <block>
-    <key>burst_scheduler</key>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -242,11 +191,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/tmp/modem_xmit.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(84, 228)</value>
+      <value>(944, 258)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -254,221 +207,14 @@
     </param>
     <param>
       <key>id</key>
-      <value>burst_scheduler_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>es_source</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>eb</key>
-      <value>asap</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(232, 310)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>nthreads</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>es_source_0</value>
+      <value>blocks_file_sink_0</value>
     </param>
     <param>
       <key>type</key>
       <value>complex</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>mm</key>
-      <value>memcpy</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>import</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(228, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>import_1</value>
-    </param>
-    <param>
-      <key>import</key>
-      <value>from PyQt4 import Qt</value>
-    </param>
-  </block>
-  <block>
-    <key>import</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(228, 44)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>import_2</value>
-    </param>
-    <param>
-      <key>import</key>
-      <value>import pyqt</value>
-    </param>
-  </block>
-  <block>
-    <key>mapper_mapper_msg</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(732, 108)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>mapper_mapper_msg_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>modtype</key>
-      <value>mapper.QPSK</value>
-    </param>
-    <param>
-      <key>symbol_values</key>
-      <value>[0,1,3,2]</value>
-    </param>
-  </block>
-  <block>
-    <key>pad_sink</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(936, 320)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>msg_burst_out_sink</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>samples_out</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>optional</key>
+      <key>unbuffered</key>
       <value>False</value>
     </param>
     <param>
@@ -477,9 +223,17 @@
     </param>
   </block>
   <block>
-    <key>pad_source</key>
+    <key>blocks_message_debug</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
     <param>
       <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -488,7 +242,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(28, 116)</value>
+      <value>(960, 120)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -496,27 +250,211 @@
     </param>
     <param>
       <key>id</key>
-      <value>msg_pdu_in_src</value>
+      <value>blocks_message_debug_0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_message_strobe</key>
+    <param>
+      <key>alias</key>
+      <value></value>
     </param>
     <param>
-      <key>label</key>
-      <value>pdu_in</value>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
-      <key>num_streams</key>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>1</value>
     </param>
     <param>
-      <key>optional</key>
-      <value>False</value>
+      <key>_coordinate</key>
+      <value>(36, 192)</value>
     </param>
     <param>
-      <key>type</key>
-      <value>message</value>
+      <key>_rotation</key>
+      <value>0</value>
     </param>
     <param>
-      <key>vlen</key>
+      <key>id</key>
+      <value>blocks_message_strobe_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>msg</key>
+      <value>pmt.intern("TEST")</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>period</key>
+      <value>1000</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_random_pdu</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>mask</key>
+      <value>0xFF</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(216, 180)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_random_pdu_0</value>
+    </param>
+    <param>
+      <key>length_modulo</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>maxsize</key>
+      <value>256</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minsize</key>
+      <value>50</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>channel_loopback</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(584, 308)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>main_tab@1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>channel_loopback_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+  </block>
+  <block>
+    <key>channel_uhd</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(600, 376)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>main_tab@1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>channel_uhd_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>rx_freq</key>
+      <value>cfg["freqs"][0]</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>tx_freq</key>
+      <value>cfg["freqs"][1]</value>
     </param>
   </block>
   <block>
@@ -535,7 +473,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(444, 12)</value>
+      <value>(368, 10)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -543,7 +481,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>pre_bits</value>
+      <value>config</value>
     </param>
     <param>
       <key>label</key>
@@ -555,19 +493,196 @@
     </param>
     <param>
       <key>hide</key>
-      <value>part</value>
+      <value>none</value>
     </param>
     <param>
       <key>type</key>
-      <value></value>
+      <value>string</value>
     </param>
     <param>
       <key>value</key>
-      <value>[0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0]</value>
+      <value>base</value>
     </param>
   </block>
   <block>
-    <key>pyqt_ctime_plot</key>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(164, 44)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_0</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import random</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(168, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_1</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import pyqt</value>
+    </param>
+  </block>
+  <block>
+    <key>qtgui_tab_widget</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(944, 4)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>main_tab</value>
+    </param>
+    <param>
+      <key>label0</key>
+      <value>Main</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value>Chan</value>
+    </param>
+    <param>
+      <key>label10</key>
+      <value>Tab 10</value>
+    </param>
+    <param>
+      <key>label11</key>
+      <value>Tab 11</value>
+    </param>
+    <param>
+      <key>label12</key>
+      <value>Tab 12</value>
+    </param>
+    <param>
+      <key>label13</key>
+      <value>Tab 13</value>
+    </param>
+    <param>
+      <key>label14</key>
+      <value>Tab 14</value>
+    </param>
+    <param>
+      <key>label15</key>
+      <value>Tab 15</value>
+    </param>
+    <param>
+      <key>label16</key>
+      <value>Tab 16</value>
+    </param>
+    <param>
+      <key>label17</key>
+      <value>Tab 17</value>
+    </param>
+    <param>
+      <key>label18</key>
+      <value>Tab 18</value>
+    </param>
+    <param>
+      <key>label19</key>
+      <value>Tab 19</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value>Modem</value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value>Rx</value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value>Tab 4</value>
+    </param>
+    <param>
+      <key>label5</key>
+      <value>Tab 5</value>
+    </param>
+    <param>
+      <key>label6</key>
+      <value>Tab 6</value>
+    </param>
+    <param>
+      <key>label7</key>
+      <value>Tab 7</value>
+    </param>
+    <param>
+      <key>label8</key>
+      <value>Tab 8</value>
+    </param>
+    <param>
+      <key>label9</key>
+      <value>Tab 9</value>
+    </param>
+    <param>
+      <key>num_tabs</key>
+      <value>3</value>
+    </param>
+  </block>
+  <block>
+    <key>modem_iface</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -582,15 +697,15 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1108, 116)</value>
+      <value>(600, 152)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>1,0</value>
+      <value>main_tab@2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -598,11 +713,19 @@
     </param>
     <param>
       <key>id</key>
-      <value>pyqt_ctime_plot_0</value>
+      <value>modem_iface_0</value>
     </param>
     <param>
-      <key>l</key>
-      <value></value>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
     </param>
   </block>
   <block>
@@ -621,11 +744,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1096, 230)</value>
+      <value>(932, 206)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -641,10 +764,49 @@
     </param>
   </block>
   <block>
-    <key>root_raised_cosine_filter</key>
+    <key>uaslink_pdu_control_to_pdu_vector</key>
     <param>
-      <key>alpha</key>
-      <value>0.35</value>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(304, 134)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>uaslink_pdu_control_to_pdu_vector_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>zeromq_sub_msg_source</key>
+    <param>
+      <key>address</key>
+      <value>'tcp://127.0.0.1:14000'</value>
     </param>
     <param>
       <key>alias</key>
@@ -659,36 +821,20 @@
       <value></value>
     </param>
     <param>
-      <key>decim</key>
-      <value>1</value>
-    </param>
-    <param>
       <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>interp_fir_filter_ccf</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(476, 286)</value>
+      <value>(20, 120)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
-      <key>gain</key>
-      <value>1</value>
-    </param>
-    <param>
       <key>id</key>
-      <value>root_raised_cosine_filter_0</value>
-    </param>
-    <param>
-      <key>interp</key>
-      <value>2</value>
+      <value>zeromq_sub_msg_source_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -699,129 +845,74 @@
       <value>0</value>
     </param>
     <param>
-      <key>ntaps</key>
-      <value>41</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>2.0</value>
-    </param>
-    <param>
-      <key>sym_rate</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(356, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value></value>
-    </param>
-    <param>
-      <key>hide</key>
-      <value>none</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>200e3</value>
+      <key>timeout</key>
+      <value>100</value>
     </param>
   </block>
   <connection>
-    <source_block_id>burst_framer_0</source_block_id>
-    <sink_block_id>burst_randomizer_0</sink_block_id>
-    <source_key>unpacked_pdus</source_key>
-    <sink_key>pdus</sink_key>
+    <source_block_id>blocks_message_strobe_0</source_block_id>
+    <sink_block_id>blocks_random_pdu_0</sink_block_id>
+    <source_key>strobe</source_key>
+    <sink_key>generate</sink_key>
   </connection>
   <connection>
-    <source_block_id>burst_preamble_insert_0</source_block_id>
-    <sink_block_id>mapper_mapper_msg_0</sink_block_id>
+    <source_block_id>blocks_random_pdu_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_key>data_tx_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>burst_randomizer_0</source_block_id>
-    <sink_block_id>burst_preamble_insert_0</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>pdus</sink_key>
+    <source_block_id>channel_loopback_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>burst_scheduler_0</source_block_id>
-    <sink_block_id>es_source_0</sink_block_id>
-    <source_key>sched_pdu</source_key>
-    <sink_key>schedule_event</sink_key>
+    <source_block_id>channel_uhd_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>burst_scheduler_0</source_block_id>
+    <source_block_id>modem_iface_0</source_block_id>
+    <sink_block_id>blocks_message_debug_0</sink_block_id>
+    <source_key>data_rx_pdu</source_key>
+    <sink_key>print_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>modem_iface_0</source_block_id>
     <sink_block_id>pyqt_meta_text_output_0</sink_block_id>
-    <source_key>sched_pdu</source_key>
+    <source_key>data_rx_pdu</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>es_source_0</source_block_id>
-    <sink_block_id>burst_scheduler_0</sink_block_id>
-    <source_key>nproduced</source_key>
-    <sink_key>nproduced</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>es_source_0</source_block_id>
-    <sink_block_id>root_raised_cosine_filter_0</sink_block_id>
+    <source_block_id>modem_iface_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>mapper_mapper_msg_0</source_block_id>
-    <sink_block_id>burst_scheduler_0</sink_block_id>
-    <source_key>cpdus</source_key>
-    <sink_key>sched_pdu</sink_key>
+    <source_block_id>modem_iface_0</source_block_id>
+    <sink_block_id>channel_loopback_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>mapper_mapper_msg_0</source_block_id>
-    <sink_block_id>pyqt_ctime_plot_0</sink_block_id>
-    <source_key>cpdus</source_key>
-    <sink_key>cpdus</sink_key>
+    <source_block_id>modem_iface_0</source_block_id>
+    <sink_block_id>channel_uhd_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>msg_pdu_in_src</source_block_id>
-    <sink_block_id>burst_framer_0</sink_block_id>
+    <source_block_id>uaslink_pdu_control_to_pdu_vector_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>data_tx_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>uaslink_pdu_control_to_pdu_vector_0</sink_block_id>
     <source_key>out</source_key>
-    <sink_key>packed_pdus</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>root_raised_cosine_filter_0</source_block_id>
-    <sink_block_id>msg_burst_out_sink</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>Control_IN</sink_key>
   </connection>
 </flow_graph>

@@ -109,7 +109,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(476, 288)</value>
+      <value>(272, 296)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -118,57 +118,6 @@
     <param>
       <key>id</key>
       <value>blocks_message_debug_0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_pdu_filter</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(584, 190)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_pdu_filter_0</value>
-    </param>
-    <param>
-      <key>invert</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>k</key>
-      <value>pmt.intern("never_going_to_see_this_key")</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>v</key>
-      <value>pmt.intern("whatever")</value>
     </param>
   </block>
   <block>
@@ -183,7 +132,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(820, 116)</value>
+      <value>(644, 124)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -226,7 +175,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(300, 104)</value>
+      <value>(124, 112)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -300,7 +249,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(292, 248)</value>
+      <value>(116, 256)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -343,7 +292,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(828, 248)</value>
+      <value>(652, 256)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -375,6 +324,41 @@
     </param>
   </block>
   <block>
+    <key>note</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value>Just crossover radio/link for now.
+
+A Real app would actually use these messages.
+Radio is for UHD messages, for example.
+Link is for higher protocol level messages.</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(432, 304)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>note_0</value>
+    </param>
+    <param>
+      <key>note</key>
+      <value>Just a hack</value>
+    </param>
+  </block>
+  <block>
     <key>packet_modem</key>
     <param>
       <key>alias</key>
@@ -394,7 +378,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 132)</value>
+      <value>(352, 140)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -441,7 +425,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(528, 72)</value>
+      <value>(352, 80)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -480,7 +464,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(292, 204)</value>
+      <value>(116, 212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -523,7 +507,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(828, 204)</value>
+      <value>(652, 212)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -566,7 +550,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 148)</value>
+      <value>(120, 156)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -656,7 +640,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(820, 160)</value>
+      <value>(644, 168)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -688,12 +672,6 @@
     </param>
   </block>
   <connection>
-    <source_block_id>blocks_pdu_filter_0</source_block_id>
-    <sink_block_id>radio_ctrl_out_port</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>in</sink_key>
-  </connection>
-  <connection>
     <source_block_id>data_tx_pdu_port</source_block_id>
     <sink_block_id>packet_modem_0</sink_block_id>
     <source_key>out</source_key>
@@ -713,7 +691,7 @@
   </connection>
   <connection>
     <source_block_id>link_ctrl_in_port</source_block_id>
-    <sink_block_id>link_ctrl_out_port</sink_block_id>
+    <sink_block_id>radio_ctrl_out_port</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -749,9 +727,9 @@
   </connection>
   <connection>
     <source_block_id>radio_ctrl_in_port</source_block_id>
-    <sink_block_id>blocks_pdu_filter_0</sink_block_id>
+    <sink_block_id>link_ctrl_out_port</sink_block_id>
     <source_key>out</source_key>
-    <sink_key>pdus</sink_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>rx_samples_port</source_block_id>
