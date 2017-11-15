@@ -47,9 +47,9 @@ def main():
         pdu = pmt.deserialize_str(msg)
         car = pmt.to_python(pmt.car(pdu))
         cdr = pmt.to_python(pmt.cdr(pdu))
-        if car != None:
+        if car is not None:
             print '[car] Received [%i] bytes: %s' % (len(car), string_to_hex(car))
-        if cdr != None:
+        if cdr is not None:
             print '[cdr] Received [%i] bytes: %s' % (len(cdr), string_to_hex(cdr))
 
 
