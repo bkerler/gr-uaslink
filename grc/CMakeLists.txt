@@ -23,5 +23,7 @@ install(FILES
     uaslink_mavlink_control.xml
     uaslink_pdu_control_to_pdu_vector.xml
     uaslink_pdu_vector_to_pdu_control.xml
-    uaslink_burst_verification.xml DESTINATION share/gnuradio/grc/blocks
+    uaslink_burst_verification.xml
+    uaslink_message_debug_hex.xml
+    uaslink_pdu_to_binary_vector.xml DESTINATION share/gnuradio/grc/blocks
 )
