@@ -199,7 +199,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 258)</value>
+      <value>(892, 298)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -238,11 +238,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 120)</value>
+      <value>(1136, 156)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -254,7 +254,7 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
-    <key>blocks_message_strobe</key>
+    <key>blocks_message_debug</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -269,11 +269,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(36, 192)</value>
+      <value>(264, 432)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -281,34 +281,14 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>blocks_message_strobe_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>msg</key>
-      <value>pmt.intern("TEST")</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>period</key>
-      <value>1000</value>
+      <value>blocks_message_debug_1_0</value>
     </param>
   </block>
   <block>
-    <key>blocks_random_pdu</key>
+    <key>burst_packer</key>
     <param>
       <key>alias</key>
       <value></value>
-    </param>
-    <param>
-      <key>mask</key>
-      <value>0xFF</value>
     </param>
     <param>
       <key>comment</key>
@@ -324,7 +304,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 180)</value>
+      <value>(912, 182)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -332,23 +312,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>blocks_random_pdu_0</value>
-    </param>
-    <param>
-      <key>length_modulo</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>maxsize</key>
-      <value>256</value>
+      <value>burst_packer_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>minsize</key>
-      <value>50</value>
     </param>
     <param>
       <key>minoutbuf</key>
@@ -371,11 +339,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(584, 308)</value>
+      <value>(584, 344)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -422,7 +390,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(600, 376)</value>
+      <value>(596, 414)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -547,7 +515,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -564,6 +532,45 @@ Maybe better to use file variables.</value>
     <param>
       <key>import</key>
       <value>import pyqt</value>
+    </param>
+  </block>
+  <block>
+    <key>kschehr_zmq_to_pdu_vector</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(312, 222)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>kschehr_zmq_to_pdu_vector_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
     </param>
   </block>
   <block>
@@ -697,11 +704,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(600, 152)</value>
+      <value>(600, 188)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -729,7 +736,7 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
-    <key>pyqt_meta_text_output</key>
+    <key>no_delay</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -744,11 +751,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(932, 206)</value>
+      <value>(592, 510)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -760,7 +767,85 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>pyqt_meta_text_output_0</value>
+      <value>no_delay_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>uaslink_message_debug_hex</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>In Payload</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(316, 124)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>uaslink_message_debug_hex_0</value>
+    </param>
+  </block>
+  <block>
+    <key>uaslink_message_debug_hex</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>Out Payload</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1132, 112)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>uaslink_message_debug_hex_0_0</value>
     </param>
   </block>
   <block>
@@ -783,7 +868,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 134)</value>
+      <value>(304, 290)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -800,6 +885,84 @@ Maybe better to use file variables.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>uaslink_pdu_to_binary_vector</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(304, 182)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>uaslink_pdu_to_binary_vector_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>zeromq_pub_msg_sink</key>
+    <param>
+      <key>address</key>
+      <value>'tcp://127.0.0.1:14001'</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1120, 244)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zeromq_pub_msg_sink_0</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
     </param>
   </block>
   <block>
@@ -822,11 +985,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(20, 120)</value>
+      <value>(28, 168)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -850,16 +1013,22 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <connection>
-    <source_block_id>blocks_message_strobe_0</source_block_id>
-    <sink_block_id>blocks_random_pdu_0</sink_block_id>
-    <source_key>strobe</source_key>
-    <sink_key>generate</sink_key>
+    <source_block_id>burst_packer_0</source_block_id>
+    <sink_block_id>blocks_message_debug_0</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>print_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_random_pdu_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_block_id>burst_packer_0</source_block_id>
+    <sink_block_id>uaslink_message_debug_hex_0_0</sink_block_id>
     <source_key>pdus</source_key>
-    <sink_key>data_tx_pdu</sink_key>
+    <sink_key>Control_IN</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>burst_packer_0</source_block_id>
+    <sink_block_id>zeromq_pub_msg_sink_0</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>channel_loopback_0</source_block_id>
@@ -874,14 +1043,20 @@ Maybe better to use file variables.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>blocks_message_debug_0</sink_block_id>
-    <source_key>data_rx_pdu</source_key>
-    <sink_key>print_pdu</sink_key>
+    <source_block_id>kschehr_zmq_to_pdu_vector_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>data_tx_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>kschehr_zmq_to_pdu_vector_0</source_block_id>
+    <sink_block_id>no_delay_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>pdu_in</sink_key>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>pyqt_meta_text_output_0</sink_block_id>
+    <sink_block_id>burst_packer_0</sink_block_id>
     <source_key>data_rx_pdu</source_key>
     <sink_key>pdus</sink_key>
   </connection>
@@ -904,14 +1079,50 @@ Maybe better to use file variables.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>no_delay_0</source_block_id>
+    <sink_block_id>burst_packer_0</sink_block_id>
+    <source_key>pdu_out</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
     <source_block_id>uaslink_pdu_control_to_pdu_vector_0</source_block_id>
     <sink_block_id>modem_iface_0</sink_block_id>
     <source_key>Vector_OUT</source_key>
     <sink_key>data_tx_pdu</sink_key>
   </connection>
   <connection>
+    <source_block_id>uaslink_pdu_to_binary_vector_0</source_block_id>
+    <sink_block_id>no_delay_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>pdu_in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>blocks_message_debug_1_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>print_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>kschehr_zmq_to_pdu_vector_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>Control_IN</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>uaslink_message_debug_hex_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>Control_IN</sink_key>
+  </connection>
+  <connection>
     <source_block_id>zeromq_sub_msg_source_0</source_block_id>
     <sink_block_id>uaslink_pdu_control_to_pdu_vector_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>Control_IN</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>uaslink_pdu_to_binary_vector_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>Control_IN</sink_key>
   </connection>
