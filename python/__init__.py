@@ -39,4 +39,6 @@ from mavlink_control import mavlink_control
 from pdu_control_to_pdu_vector import pdu_control_to_pdu_vector
 from pdu_vector_to_pdu_control import pdu_vector_to_pdu_control
 from burst_verification import burst_verification
+from pdu_to_binary_vector import pdu_to_binary_vector
+from message_debug_hex import message_debug_hex
 #

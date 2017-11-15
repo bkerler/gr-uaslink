@@ -386,7 +386,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -532,45 +532,6 @@ Maybe better to use file variables.</value>
     <param>
       <key>import</key>
       <value>import pyqt</value>
-    </param>
-  </block>
-  <block>
-    <key>kschehr_zmq_to_pdu_vector</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(312, 222)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>kschehr_zmq_to_pdu_vector_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
     </param>
   </block>
   <block>
@@ -907,7 +868,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 182)</value>
+      <value>(308, 182)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -915,7 +876,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>uaslink_pdu_to_binary_vector_0</value>
+      <value>uaslink_pdu_to_binary_vector_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1043,18 +1004,6 @@ Maybe better to use file variables.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>kschehr_zmq_to_pdu_vector_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
-    <source_key>Vector_OUT</source_key>
-    <sink_key>data_tx_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>kschehr_zmq_to_pdu_vector_0</source_block_id>
-    <sink_block_id>no_delay_0</sink_block_id>
-    <source_key>Vector_OUT</source_key>
-    <sink_key>pdu_in</sink_key>
-  </connection>
-  <connection>
     <source_block_id>modem_iface_0</source_block_id>
     <sink_block_id>burst_packer_0</sink_block_id>
     <source_key>data_rx_pdu</source_key>
@@ -1091,7 +1040,7 @@ Maybe better to use file variables.</value>
     <sink_key>data_tx_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>uaslink_pdu_to_binary_vector_0</source_block_id>
+    <source_block_id>uaslink_pdu_to_binary_vector_1</source_block_id>
     <sink_block_id>no_delay_0</sink_block_id>
     <source_key>Vector_OUT</source_key>
     <sink_key>pdu_in</sink_key>
@@ -1101,12 +1050,6 @@ Maybe better to use file variables.</value>
     <sink_block_id>blocks_message_debug_1_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
-    <sink_block_id>kschehr_zmq_to_pdu_vector_0</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>Control_IN</sink_key>
   </connection>
   <connection>
     <source_block_id>zeromq_sub_msg_source_0</source_block_id>
@@ -1122,7 +1065,7 @@ Maybe better to use file variables.</value>
   </connection>
   <connection>
     <source_block_id>zeromq_sub_msg_source_0</source_block_id>
-    <sink_block_id>uaslink_pdu_to_binary_vector_0</sink_block_id>
+    <sink_block_id>uaslink_pdu_to_binary_vector_1</sink_block_id>
     <source_key>out</source_key>
     <sink_key>Control_IN</sink_key>
   </connection>
