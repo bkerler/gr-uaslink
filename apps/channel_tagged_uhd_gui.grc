@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>channel_uhd</value>
+      <value>channel_tagged_uhd</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -2525,7 +2525,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>200e3</value>
+      <value>100e3</value>
     </param>
   </block>
   <block>
@@ -3621,7 +3621,7 @@
     </param>
     <param>
       <key>len_tag_name</key>
-      <value></value>
+      <value>packet_len</value>
     </param>
     <param>
       <key>otw</key>

@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>hb</value>
+      <value>hb_qt_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>psk_burst_tx_wrapper</value>
+      <value>psk_burst_tx_wrapper_gui</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -325,6 +325,68 @@
     </param>
   </block>
   <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(228, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_1</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>from PyQt4 import Qt</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(228, 44)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_2</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>import pyqt</value>
+    </param>
+  </block>
+  <block>
     <key>mapper_mapper_msg</key>
     <param>
       <key>alias</key>
@@ -505,6 +567,80 @@
     </param>
   </block>
   <block>
+    <key>pyqt_ctime_plot</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1108, 116)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>1,0</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pyqt_ctime_plot_0</value>
+    </param>
+    <param>
+      <key>l</key>
+      <value></value>
+    </param>
+  </block>
+  <block>
+    <key>pyqt_meta_text_output</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1096, 230)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>pyqt_meta_text_output_0</value>
+    </param>
+  </block>
+  <block>
     <key>root_raised_cosine_filter</key>
     <param>
       <key>alpha</key>
@@ -647,6 +783,12 @@
     <sink_key>schedule_event</sink_key>
   </connection>
   <connection>
+    <source_block_id>burst_scheduler_0</source_block_id>
+    <sink_block_id>pyqt_meta_text_output_0</sink_block_id>
+    <source_key>sched_pdu</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
     <source_block_id>es_source_0</source_block_id>
     <sink_block_id>burst_scheduler_0</sink_block_id>
     <source_key>nproduced</source_key>
@@ -663,6 +805,12 @@
     <sink_block_id>burst_scheduler_0</sink_block_id>
     <source_key>cpdus</source_key>
     <sink_key>sched_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>mapper_mapper_msg_0</source_block_id>
+    <sink_block_id>pyqt_ctime_plot_0</sink_block_id>
+    <source_key>cpdus</source_key>
+    <sink_key>cpdus</sink_key>
   </connection>
   <connection>
     <source_block_id>msg_pdu_in_src</source_block_id>
