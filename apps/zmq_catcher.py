@@ -35,6 +35,7 @@ def string_to_hex(data):
 def main():
     ''' Subscribe to a ZMQ port and print everything we see '''
     port = "14001"
+    # port = "14000"  # Loopback testing
     context = zmq.Context()
     socket = context.socket(zmq.SUB)
 
@@ -47,11 +48,13 @@ def main():
         pdu = pmt.deserialize_str(msg)
         car = pmt.to_python(pmt.car(pdu))
         cdr = pmt.to_python(pmt.cdr(pdu))
+        cdr = numpy.getbuffer(cdr)  # flatten the vector bytes
+
         if car is not None:
-            print '[car] Received [%i] bytes: %s' % (len(car), string_to_hex(car))
+            print car  # Print the dict
+            # print '[car] Received [%i] bytes: %s' % (len(car), string_to_hex(car))
         if cdr is not None:
             print '[cdr] Received [%i] bytes: %s' % (len(cdr), string_to_hex(cdr))
-
 
 def signal_handler(signal, frame):
     print("\nQuitting...")
