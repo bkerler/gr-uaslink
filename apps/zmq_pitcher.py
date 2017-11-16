@@ -67,7 +67,7 @@ def main():
     data = data * 10
     data = data.tobytes()  # Send a string of binary data uint8
 
-    for i in xrange(1):
+    for i in xrange(100):
         print "----------------------"
         control.send_binary(data)
         time.sleep(.5)

@@ -359,6 +359,49 @@ Link is for higher protocol level messages.</value>
     </param>
   </block>
   <block>
+    <key>packet_modem</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(368, 148)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>packet_modem_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+  </block>
+  <block>
     <key>psk_burst_modem_gui</key>
     <param>
       <key>alias</key>
@@ -374,11 +417,11 @@ Link is for higher protocol level messages.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(332, 128)</value>
+      <value>(332, 88)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -626,6 +669,12 @@ Link is for higher protocol level messages.</value>
   </block>
   <connection>
     <source_block_id>data_tx_pdu_port</source_block_id>
+    <sink_block_id>packet_modem_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>pdu_in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>data_tx_pdu_port</source_block_id>
     <sink_block_id>psk_burst_modem_gui_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdu_in</sink_key>
@@ -641,6 +690,18 @@ Link is for higher protocol level messages.</value>
     <sink_block_id>radio_ctrl_out_port</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>packet_modem_0</source_block_id>
+    <sink_block_id>data_rx_pdu_port</sink_block_id>
+    <source_key>pdu_out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>packet_modem_0</source_block_id>
+    <sink_block_id>tx_samples_port</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>psk_burst_modem_gui_0</source_block_id>
@@ -665,6 +726,12 @@ Link is for higher protocol level messages.</value>
     <sink_block_id>link_ctrl_out_port</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>rx_samples_port</source_block_id>
+    <sink_block_id>packet_modem_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>rx_samples_port</source_block_id>

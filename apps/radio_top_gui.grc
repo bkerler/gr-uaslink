@@ -390,15 +390,15 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>rx_freq</key>
-      <value>2450e6</value>
+      <value>cfg["freqs"][0]</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>100e3</value>
+      <value>samp_rate</value>
     </param>
     <param>
       <key>tx_freq</key>
-      <value>2460e6</value>
+      <value>cfg["freqs"][1]</value>
     </param>
   </block>
   <block>
