@@ -102,7 +102,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(612, 12)</value>
+      <value>(672, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -121,7 +121,7 @@ Maybe better to use file variables.</value>
     <key>variable</key>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>base</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -129,7 +129,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(460, 12)</value>
+      <value>(496, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -141,7 +141,34 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>value</key>
-      <value>[2.405e9,2.35e9]</value>
+      <value>[3.013e9,3.017e9]</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value>uav</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(496, 92)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>freqs</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>[3.017e9,3.013e9]</value>
     </param>
   </block>
   <block>
@@ -320,7 +347,7 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
-    <key>channel_tagged_uhd</key>
+    <key>channel_tagged_uhd_gui</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -335,11 +362,15 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(596, 444)</value>
+      <value>(556, 450)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>main_tab@1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -347,7 +378,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>channel_tagged_uhd_0</value>
+      <value>channel_tagged_uhd_gui_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -359,23 +390,15 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>rx_freq</key>
-      <value>cfg["freqs"][0]</value>
-    </param>
-    <param>
-      <key>rx_gain</key>
-      <value>60</value>
+      <value>2450e6</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>100e3</value>
     </param>
     <param>
       <key>tx_freq</key>
-      <value>cfg["freqs"][1]</value>
-    </param>
-    <param>
-      <key>tx_gain</key>
-      <value>30</value>
+      <value>2460e6</value>
     </param>
   </block>
   <block>
@@ -394,7 +417,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -496,7 +519,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(164, 44)</value>
+      <value>(164, 56)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -527,7 +550,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(168, 8)</value>
+      <value>(176, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -554,7 +577,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -673,11 +696,15 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(600, 188)</value>
+      <value>(568, 184)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>main_tab@2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -685,7 +712,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>modem_iface_0</value>
+      <value>modem_iface_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -697,7 +724,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>samp_rate</key>
-      <value>samp_rate</value>
+      <value>100e3</value>
     </param>
   </block>
   <block>
@@ -716,15 +743,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(592, 558)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value></value>
     </param>
     <param>
       <key>_rotation</key>
@@ -958,42 +981,42 @@ Maybe better to use file variables.</value>
   </connection>
   <connection>
     <source_block_id>channel_loopback_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
+    <sink_block_id>modem_iface_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>channel_tagged_uhd_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_block_id>channel_tagged_uhd_gui_0</source_block_id>
+    <sink_block_id>modem_iface_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>channel_uhd_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
+    <sink_block_id>modem_iface_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>modem_iface_0</source_block_id>
+    <source_block_id>modem_iface_1</source_block_id>
     <sink_block_id>burst_packer_0</sink_block_id>
     <source_key>data_rx_pdu</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>modem_iface_0</source_block_id>
+    <source_block_id>modem_iface_1</source_block_id>
     <sink_block_id>channel_loopback_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>channel_tagged_uhd_0</sink_block_id>
+    <source_block_id>modem_iface_1</source_block_id>
+    <sink_block_id>channel_tagged_uhd_gui_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>modem_iface_0</source_block_id>
+    <source_block_id>modem_iface_1</source_block_id>
     <sink_block_id>channel_uhd_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -1006,7 +1029,7 @@ Maybe better to use file variables.</value>
   </connection>
   <connection>
     <source_block_id>uaslink_pdu_to_binary_vector_1</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
+    <sink_block_id>modem_iface_1</sink_block_id>
     <source_key>Vector_OUT</source_key>
     <sink_key>data_tx_pdu</sink_key>
   </connection>

@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>psk_burst_modem</value>
+      <value>psk_burst_modem_gui</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -306,7 +306,7 @@
     </param>
   </block>
   <block>
-    <key>psk_burst_rx_wrapper</key>
+    <key>psk_burst_rx_wrapper_gui</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -325,7 +325,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(516, 216)</value>
+      <value>(456, 204)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -337,7 +337,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>psk_burst_rx_wrapper_0</value>
+      <value>psk_burst_rx_wrapper_gui_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -349,7 +349,7 @@
     </param>
     <param>
       <key>pre_bits</key>
-      <value>pre_bits</value>
+      <value>[0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0]</value>
     </param>
     <param>
       <key>samp_rate</key>
@@ -357,7 +357,7 @@
     </param>
   </block>
   <block>
-    <key>psk_burst_tx_wrapper</key>
+    <key>psk_burst_tx_wrapper_gui</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -376,7 +376,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(500, 108)</value>
+      <value>(448, 104)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -388,7 +388,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>psk_burst_tx_wrapper_0</value>
+      <value>psk_burst_tx_wrapper_gui_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -400,7 +400,7 @@
     </param>
     <param>
       <key>pre_bits</key>
-      <value>pre_bits</value>
+      <value>[0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0]</value>
     </param>
     <param>
       <key>samp_rate</key>
@@ -585,25 +585,25 @@
   </block>
   <connection>
     <source_block_id>pdu_in_port</source_block_id>
-    <sink_block_id>psk_burst_tx_wrapper_0</sink_block_id>
+    <sink_block_id>psk_burst_tx_wrapper_gui_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdu_in</sink_key>
   </connection>
   <connection>
-    <source_block_id>psk_burst_rx_wrapper_0</source_block_id>
+    <source_block_id>psk_burst_rx_wrapper_gui_0</source_block_id>
     <sink_block_id>pud_out_port</sink_block_id>
     <source_key>pdu_out</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>psk_burst_tx_wrapper_0</source_block_id>
+    <source_block_id>psk_burst_tx_wrapper_gui_0</source_block_id>
     <sink_block_id>samples_out_port</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>samples_in_port</source_block_id>
-    <sink_block_id>psk_burst_rx_wrapper_0</sink_block_id>
+    <sink_block_id>psk_burst_rx_wrapper_gui_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

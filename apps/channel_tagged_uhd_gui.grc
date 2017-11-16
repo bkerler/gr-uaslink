@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>channel_tagged_uhd</value>
+      <value>channel_tagged_uhd_gui</value>
     </param>
     <param>
       <key>max_nouts</key>
