@@ -543,7 +543,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>

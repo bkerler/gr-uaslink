@@ -1129,11 +1129,11 @@
     </param>
     <param>
       <key>tr_level</key>
-      <value>0.0</value>
+      <value>-60</value>
     </param>
     <param>
       <key>tr_mode</key>
-      <value>qtgui.TRIG_MODE_FREE</value>
+      <value>qtgui.TRIG_MODE_NORM</value>
     </param>
     <param>
       <key>tr_tag</key>
@@ -1428,11 +1428,11 @@
     </param>
     <param>
       <key>tr_level</key>
-      <value>0.0</value>
+      <value>-60</value>
     </param>
     <param>
       <key>tr_mode</key>
-      <value>qtgui.TRIG_MODE_FREE</value>
+      <value>qtgui.TRIG_MODE_NORM</value>
     </param>
     <param>
       <key>tr_tag</key>

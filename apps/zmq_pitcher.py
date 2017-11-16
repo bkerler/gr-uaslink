@@ -68,7 +68,8 @@ def main():
     data = data.tobytes()  # convert to bytes
     data = numpy.frombuffer(data, dtype=numpy.uint8)  # convert to a vector of uint8 (flow graph can take more per item but there is a small'ish max)
 
-    for i in xrange(100):
+    #for i in xrange(1):
+    while True:
         print "----------------------"
         control.send_binary(data)
         time.sleep(.5)
