@@ -57,15 +57,16 @@ class Control:
         print 'Sending [%d] byte payload: %s' % (len(data), self.string_to_hex(data))
         self.zmqc.send(pmt.serialize_str(pdu))
 
-
 def main():
     control = Control()
     control.zmq_setup('tcp://127.0.0.1:14000')
     time.sleep(.2)  # FixMe: This seems to be required or else we drop the first message, check for ready state -KDS
 
-    data = BitArray('0xDEADBEEF')
-    data = data * 10
-    data = data.tobytes()  # Send a string of binary data uint8
+    # data = BitArray('0xDEADBEEF')
+    data = BitArray('0xfe2106ff004c0000803f00000000000000000000000000000000000000000000000090010101006d614dd60c5a4eaa0c004400000044000000000000000000000000000000080045000036575c40004006e5637f0000017f0000012328b13645dd90e64419123d8018002b00')  # arm
+    # data = data * 10000
+    data = data.tobytes()  # convert to bytes
+    data = numpy.frombuffer(data, dtype=numpy.uint8)  # convert to a vector of uint8 (flow graph can take more per item but there is a small'ish max)
 
     for i in xrange(100):
         print "----------------------"
