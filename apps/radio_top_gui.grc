@@ -168,58 +168,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>value</key>
-      <value>500e3</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/tmp/modem_xmit.dat</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(892, 298)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
+      <value>200e3</value>
     </param>
   </block>
   <block>
@@ -242,7 +191,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1136, 156)</value>
+      <value>(1104, 164)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -273,7 +222,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 432)</value>
+      <value>(292, 256)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -304,7 +253,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(912, 182)</value>
+      <value>(828, 182)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -371,6 +320,65 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
+    <key>channel_tagged_uhd</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(596, 444)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>channel_tagged_uhd_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>rx_freq</key>
+      <value>cfg["freqs"][0]</value>
+    </param>
+    <param>
+      <key>rx_gain</key>
+      <value>60</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>tx_freq</key>
+      <value>cfg["freqs"][1]</value>
+    </param>
+    <param>
+      <key>tx_gain</key>
+      <value>30</value>
+    </param>
+  </block>
+  <block>
     <key>channel_uhd</key>
     <param>
       <key>alias</key>
@@ -390,7 +398,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(596, 370)</value>
+      <value>(596, 354)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -665,15 +673,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(600, 188)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>main_tab@2</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -716,7 +720,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(592, 458)</value>
+      <value>(592, 558)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -763,7 +767,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(316, 124)</value>
+      <value>(300, 100)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -798,7 +802,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1132, 112)</value>
+      <value>(1076, 112)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -807,45 +811,6 @@ Maybe better to use file variables.</value>
     <param>
       <key>id</key>
       <value>uaslink_message_debug_hex_0_0</value>
-    </param>
-  </block>
-  <block>
-    <key>uaslink_pdu_control_to_pdu_vector</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(304, 290)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>uaslink_pdu_control_to_pdu_vector_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
     </param>
   </block>
   <block>
@@ -868,7 +833,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(308, 182)</value>
+      <value>(284, 186)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -911,7 +876,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1120, 244)</value>
+      <value>(1080, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -998,6 +963,12 @@ Maybe better to use file variables.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>channel_tagged_uhd_0</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>channel_uhd_0</source_block_id>
     <sink_block_id>modem_iface_0</sink_block_id>
     <source_key>0</source_key>
@@ -1011,13 +982,13 @@ Maybe better to use file variables.</value>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0</sink_block_id>
+    <sink_block_id>channel_loopback_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>channel_loopback_0</sink_block_id>
+    <sink_block_id>channel_tagged_uhd_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1034,7 +1005,7 @@ Maybe better to use file variables.</value>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>uaslink_pdu_control_to_pdu_vector_0</source_block_id>
+    <source_block_id>uaslink_pdu_to_binary_vector_1</source_block_id>
     <sink_block_id>modem_iface_0</sink_block_id>
     <source_key>Vector_OUT</source_key>
     <sink_key>data_tx_pdu</sink_key>
@@ -1054,12 +1025,6 @@ Maybe better to use file variables.</value>
   <connection>
     <source_block_id>zeromq_sub_msg_source_0</source_block_id>
     <sink_block_id>uaslink_message_debug_hex_0</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>Control_IN</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
-    <sink_block_id>uaslink_pdu_control_to_pdu_vector_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>Control_IN</sink_key>
   </connection>

@@ -44,7 +44,7 @@ class pdu_to_binary_vector(gr.sync_block):
 
 
     def control_handler(self, msg):
-        # meta = pmt.to_python(pmt.car(msg))  # Ignoring the meta tag for the time
+        meta = pmt.car(msg)
         data = pmt.to_python(pmt.cdr(msg))
 
         print "\n=== zmq_to_pdu_vector ==="
@@ -53,7 +53,7 @@ class pdu_to_binary_vector(gr.sync_block):
         bufnp = numpy.unpackbits(numpy.fromstring(data, dtype=numpy.uint8))  # Convert to BPSK vectors of 0x00 or 0x01
         # print '\tSymbols: [%i] bits:\t%s' % (len(bufnp), bufnp)
 
-        self.message_port_pub(pmt.intern("Vector_OUT"), pmt.cons(pmt.PMT_NIL, pmt.to_pmt(bufnp)))
+        self.message_port_pub(pmt.intern("Vector_OUT"), pmt.cons(meta, pmt.to_pmt(bufnp)))
 
 
     def work(self, input_items, output_items):

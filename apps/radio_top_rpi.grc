@@ -172,7 +172,7 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
-    <key>blocks_message_debug</key>
+    <key>burst_packer</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -187,11 +187,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 364)</value>
+      <value>(860, 202)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -199,42 +199,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>id</key>
-      <value>blocks_message_debug_1_0</value>
-    </param>
-  </block>
-  <block>
-    <key>channel_loopback</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(584, 320)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>main_tab@1</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>channel_loopback_0</value>
+      <value>burst_packer_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -243,10 +208,6 @@ Maybe better to use file variables.</value>
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
     </param>
   </block>
   <block>
@@ -265,11 +226,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(596, 444)</value>
+      <value>(588, 392)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -328,7 +289,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(604, 374)</value>
+      <value>(592, 302)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -426,7 +387,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(180, 80)</value>
+      <value>(172, 8)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -457,7 +418,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -500,15 +461,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(592, 574)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value></value>
+      <value>(604, 510)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -517,6 +474,45 @@ Maybe better to use file variables.</value>
     <param>
       <key>id</key>
       <value>no_delay_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>uaslink_pdu_to_binary_vector</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(296, 198)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>uaslink_pdu_to_binary_vector_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -551,7 +547,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -574,11 +570,97 @@ Maybe better to use file variables.</value>
       <value>0</value>
     </param>
   </block>
+  <block>
+    <key>zeromq_pub_msg_sink</key>
+    <param>
+      <key>address</key>
+      <value>'tcp://127.0.0.1:14001'</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1048, 188)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zeromq_pub_msg_sink_0</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
+    </param>
+  </block>
+  <block>
+    <key>zeromq_sub_msg_source</key>
+    <param>
+      <key>address</key>
+      <value>'tcp://127.0.0.1:14000'</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(56, 184)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>zeromq_sub_msg_source_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>timeout</key>
+      <value>100</value>
+    </param>
+  </block>
   <connection>
-    <source_block_id>channel_loopback_0</source_block_id>
-    <sink_block_id>modem_iface_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <source_block_id>burst_packer_0</source_block_id>
+    <sink_block_id>zeromq_pub_msg_sink_0</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>channel_tagged_uhd_0</source_block_id>
@@ -594,15 +676,15 @@ Maybe better to use file variables.</value>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>uaslink_pymavlink_source_sink_pp_0</sink_block_id>
+    <sink_block_id>burst_packer_0</sink_block_id>
     <source_key>data_rx_pdu</source_key>
-    <sink_key>MAVLink_IN</sink_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
-    <sink_block_id>channel_loopback_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
+    <sink_block_id>uaslink_pymavlink_source_sink_pp_0</sink_block_id>
+    <source_key>data_rx_pdu</source_key>
+    <sink_key>MAVLink_IN</sink_key>
   </connection>
   <connection>
     <source_block_id>modem_iface_0</source_block_id>
@@ -617,9 +699,33 @@ Maybe better to use file variables.</value>
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>no_delay_0</source_block_id>
+    <sink_block_id>burst_packer_0</sink_block_id>
+    <source_key>pdu_out</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>uaslink_pdu_to_binary_vector_1</source_block_id>
+    <sink_block_id>modem_iface_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>data_tx_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>uaslink_pdu_to_binary_vector_1</source_block_id>
+    <sink_block_id>no_delay_0</sink_block_id>
+    <source_key>Vector_OUT</source_key>
+    <sink_key>pdu_in</sink_key>
+  </connection>
+  <connection>
     <source_block_id>uaslink_pymavlink_source_sink_pp_0</source_block_id>
     <sink_block_id>modem_iface_0</sink_block_id>
     <source_key>MAVLink_OUT</source_key>
     <sink_key>data_tx_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zeromq_sub_msg_source_0</source_block_id>
+    <sink_block_id>uaslink_pdu_to_binary_vector_1</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>Control_IN</sink_key>
   </connection>
 </flow_graph>
