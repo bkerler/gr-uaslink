@@ -97,7 +97,7 @@
     </param>
     <param>
       <key>bs</key>
-      <value>1024</value>
+      <value>2400</value>
     </param>
     <param>
       <key>comment</key>

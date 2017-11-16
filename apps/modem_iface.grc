@@ -343,15 +343,11 @@ Link is for higher protocol level messages.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(352, 140)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value></value>
     </param>
     <param>
       <key>_rotation</key>
@@ -390,7 +386,7 @@ Link is for higher protocol level messages.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
