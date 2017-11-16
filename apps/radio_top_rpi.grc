@@ -321,7 +321,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>tx_freq</key>
-      <value>cfg["freqs"][0]</value>
+      <value>cfg["freqs"][1]</value>
     </param>
     <param>
       <key>tx_gain</key>
