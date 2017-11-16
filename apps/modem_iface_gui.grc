@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>modem_iface</value>
+      <value>modem_iface_gui</value>
     </param>
     <param>
       <key>max_nouts</key>
