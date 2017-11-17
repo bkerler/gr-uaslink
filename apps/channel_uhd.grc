@@ -90,6 +90,53 @@
     </param>
   </block>
   <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(4, 564)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>bandwidth</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>bandwidth</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>200e3</value>
+    </param>
+  </block>
+  <block>
     <key>pad_source</key>
     <param>
       <key>comment</key>
@@ -133,6 +180,53 @@
     </param>
   </block>
   <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 484)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>lo_offset</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>lo_offset</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>300e3</value>
+    </param>
+  </block>
+  <block>
     <key>pad_sink</key>
     <param>
       <key>comment</key>
@@ -144,7 +238,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(788, 196)</value>
+      <value>(792, 204)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -219,7 +313,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>2450e6</value>
+      <value>3017e6</value>
     </param>
   </block>
   <block>
@@ -266,7 +360,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>100</value>
+      <value>60</value>
     </param>
   </block>
   <block>
@@ -360,7 +454,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>2460e6</value>
+      <value>3013e6</value>
     </param>
   </block>
   <block>
@@ -407,7 +501,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>30</value>
+      <value>70</value>
     </param>
   </block>
   <block>
@@ -422,11 +516,11 @@
     </param>
     <param>
       <key>bw0</key>
-      <value>0</value>
+      <value>bandwidth</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>tx_freq</value>
+      <value>uhd.tune_request(tx_freq,lo_offset)</value>
     </param>
     <param>
       <key>norm_gain0</key>
@@ -1245,11 +1339,11 @@
     </param>
     <param>
       <key>bw0</key>
-      <value>0</value>
+      <value>bandwidth</value>
     </param>
     <param>
       <key>center_freq0</key>
-      <value>rx_freq</value>
+      <value>uhd.tune_request(rx_freq,lo_offset)</value>
     </param>
     <param>
       <key>dc_offs_enb0</key>

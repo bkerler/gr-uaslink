@@ -34,7 +34,7 @@ def string_to_hex(data):
 
 def main():
     ''' Subscribe to a ZMQ port and print everything we see '''
-    port = "14001"
+    port = "6128"
     # port = "14000"  # Loopback testing
     context = zmq.Context()
     socket = context.socket(zmq.SUB)

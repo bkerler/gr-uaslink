@@ -59,7 +59,7 @@ class Control:
 
 def main():
     control = Control()
-    control.zmq_setup('tcp://127.0.0.1:14000')
+    control.zmq_setup('tcp://127.0.0.1:6129')
     time.sleep(.2)  # FixMe: This seems to be required or else we drop the first message, check for ready state -KDS
 
     # data = BitArray('0xDEADBEEF')
