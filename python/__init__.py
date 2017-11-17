@@ -41,4 +41,5 @@ from pdu_vector_to_pdu_control import pdu_vector_to_pdu_control
 from burst_verification import burst_verification
 from pdu_to_binary_vector import pdu_to_binary_vector
 from message_debug_hex import message_debug_hex
+from binary_vector_to_pdu import binary_vector_to_pdu
 #

@@ -51,6 +51,7 @@ class pdu_to_binary_vector(gr.sync_block):
         print '\tEncoding [%i] bytes: %s' % (len(data), self.string_to_hex(data))
 
         bufnp = numpy.unpackbits(numpy.fromstring(data, dtype=numpy.uint8))  # Convert to BPSK vectors of 0x00 or 0x01
+        bufnp *= 3
         # print '\tSymbols: [%i] bits:\t%s' % (len(bufnp), bufnp)
 
         self.message_port_pub(pmt.intern("Vector_OUT"), pmt.cons(meta, pmt.to_pmt(bufnp)))

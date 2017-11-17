@@ -39,7 +39,8 @@ GR_PYTHON_INSTALL(
     pdu_vector_to_pdu_control.py
     burst_verification.py
     message_debug_hex.py
-    pdu_to_binary_vector.py DESTINATION ${GR_PYTHON_DIR}/uaslink
+    pdu_to_binary_vector.py
+    binary_vector_to_pdu.py DESTINATION ${GR_PYTHON_DIR}/uaslink
 )
 
 ########################################################################
