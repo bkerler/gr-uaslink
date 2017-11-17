@@ -118,6 +118,105 @@ Maybe better to use file variables.</value>
     </param>
   </block>
   <block>
+    <key>variable_qtgui_chooser</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>base</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(300, 10)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>config</value>
+    </param>
+    <param>
+      <key>label0</key>
+      <value>base</value>
+    </param>
+    <param>
+      <key>label1</key>
+      <value>remote</value>
+    </param>
+    <param>
+      <key>label2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>label3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>label4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>labels</key>
+      <value>[]</value>
+    </param>
+    <param>
+      <key>num_opts</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>option0</key>
+      <value>base</value>
+    </param>
+    <param>
+      <key>option1</key>
+      <value>remote</value>
+    </param>
+    <param>
+      <key>option2</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>option3</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>option4</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>options</key>
+      <value>[0, 1, 2]</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.QVBoxLayout</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>string</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>combo_box</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -179,7 +278,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>value</key>
-      <value>76</value>
+      <value>60</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -246,7 +345,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(276, 8)</value>
+      <value>(8, 64)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -269,7 +368,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>value</key>
-      <value>60</value>
+      <value>70</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -563,11 +662,11 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(368, 10)</value>
+      <value>(208, 50)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -614,7 +713,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(164, 56)</value>
+      <value>(100, 72)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1018,7 +1117,7 @@ Maybe better to use file variables.</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(280, 120)</value>
+      <value>(268, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1093,53 +1192,6 @@ Maybe better to use file variables.</value>
     <param>
       <key>id</key>
       <value>uaslink_pdu_to_binary_vector_1</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>uaslink_pymavlink_source_sink_pp</key>
-    <param>
-      <key>baud_rate</key>
-      <value>57600</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>connection_string</key>
-      <value>'/dev/ttyACM0'</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(560, 176)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>uaslink_pymavlink_source_sink_pp_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1307,12 +1359,6 @@ Maybe better to use file variables.</value>
     <sink_block_id>no_delay_0</sink_block_id>
     <source_key>Vector_OUT</source_key>
     <sink_key>pdu_in</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>uaslink_pymavlink_source_sink_pp_0</source_block_id>
-    <sink_block_id>uaslink_pdu_to_binary_vector_1</sink_block_id>
-    <source_key>MAVLink_OUT</source_key>
-    <sink_key>Control_IN</sink_key>
   </connection>
   <connection>
     <source_block_id>zeromq_sub_msg_source_0</source_block_id>

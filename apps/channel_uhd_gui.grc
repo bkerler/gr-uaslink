@@ -133,6 +133,53 @@
     </param>
   </block>
   <block>
+    <key>parameter</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 492)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>lo_offset</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>lo_offset</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>hide</key>
+      <value>none</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>3e6</value>
+    </param>
+  </block>
+  <block>
     <key>pad_sink</key>
     <param>
       <key>comment</key>
@@ -2789,7 +2836,7 @@
     </param>
     <param>
       <key>center_freq0</key>
-      <value>tx_freq</value>
+      <value>uhd.tune_request(tx_freq,lo_offset)</value>
     </param>
     <param>
       <key>norm_gain0</key>
@@ -3612,7 +3659,7 @@
     </param>
     <param>
       <key>center_freq0</key>
-      <value>rx_freq</value>
+      <value>uhd.tune_request(rx_freq,-lo_offset)</value>
     </param>
     <param>
       <key>dc_offs_enb0</key>
