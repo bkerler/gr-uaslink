@@ -1,0 +1,14 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_burst_verification
+  make: uaslink.burst_verification()
+  name: burst_verification
+  sink:
+    name: PDU_IN
+    optional: '1'
+    type: message
+  source:
+    name: Control_OUT
+    optional: '1'
+    type: message

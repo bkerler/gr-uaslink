@@ -1,0 +1,14 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_pdu_control_to_pdu_vector
+  make: uaslink.pdu_control_to_pdu_vector()
+  name: pdu_control_to_pdu_vector
+  sink:
+    name: Control_IN
+    optional: '1'
+    type: message
+  source:
+    name: Vector_OUT
+    optional: '1'
+    type: message

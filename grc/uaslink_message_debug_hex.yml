@@ -1,0 +1,13 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_message_debug_hex
+  make: uaslink.message_debug_hex($description)
+  name: message_debug_hex
+  param:
+    key: description
+    name: Description
+    type: string
+  sink:
+    name: Control_IN
+    type: message

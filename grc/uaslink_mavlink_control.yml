@@ -1,0 +1,25 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_mavlink_control
+  make: uaslink.mavlink_control($connection_string, $baud_rate)
+  name: mavlink_control
+  param:
+  - key: connection_string
+    name: Connection String
+    type: string
+  - key: baud_rate
+    name: Baud Rate
+    type: int
+    value: '57600'
+  sink:
+  - name: MAVLink_IN
+    optional: '1'
+    type: message
+  - name: Command
+    optional: '1'
+    type: message
+  source:
+    name: MAVLink_OUT
+    optional: '1'
+    type: message

@@ -1,0 +1,22 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_pymavlink_source_sink_pp
+  make: uaslink.pymavlink_source_sink_pp($connection_string,$baud_rate)
+  name: pymavlink_source_sink_pp
+  param:
+  - key: connection_string
+    name: Connection String
+    type: string
+  - key: baud_rate
+    name: Baud Rate
+    type: int
+    value: '57600'
+  sink:
+    name: MAVLink_IN
+    optional: '1'
+    type: message
+  source:
+    name: MAVLink_OUT
+    optional: '1'
+    type: message

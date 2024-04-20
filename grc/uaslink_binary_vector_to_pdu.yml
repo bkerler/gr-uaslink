@@ -1,0 +1,12 @@
+block:
+  category: '[uaslink]'
+  import: import gnuradio.uaslink as uaslink
+  key: uaslink_binary_vector_to_pdu
+  make: uaslink.binary_vector_to_pdu()
+  name: binary_vector_to_pdu
+  sink:
+    name: Vector_IN
+    type: message
+  source:
+    name: Binary_OUT
+    type: message
