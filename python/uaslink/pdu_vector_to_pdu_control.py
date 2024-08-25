@@ -41,8 +41,8 @@ class pdu_vector_to_pdu_control(gr.sync_block):
         meta =  pmt.to_python(pmt.car(msg))
         databuf = pmt.to_python(pmt.cdr(msg))
         data=numpy.frombuffer(databuf,dtype=numpy.uint32)
-        print "vector handler"
-        print data
+        print ("vector handler")
+        print (data)
         self.data[0]=int(data[0])
         self.data[1]=int(data[1])
         self.data[2]=int(data[2])

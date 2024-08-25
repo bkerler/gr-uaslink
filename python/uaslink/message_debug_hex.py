@@ -48,7 +48,7 @@ class message_debug_hex(gr.sync_block):
         car = pmt.to_python(pmt.car(msg))
         cdr = pmt.to_python(pmt.cdr(msg))
 
-        print "=== Debugging %s ===" % (self.description)
+        print ("=== Debugging %s ===" % (self.description))
 
         try:
             len_car = len(car)
@@ -68,11 +68,11 @@ class message_debug_hex(gr.sync_block):
         else:
             str_cdr = self.string_to_hex(cdr)
 
-        print "[car %i bytes]: \n\t[string]:%s\n\t[hex]:%s" % (len_car, car, str_car)
-        print
-        print "[cdr %i bytes]: \n\t[string]:%s\n\t[hex]%s:" % (len_cdr, cdr, str_cdr)
+        print ("[car %i bytes]: \n\t[string]:%s\n\t[hex]:%s" % (len_car, car, str_car))
+        print ()
+        print ("[cdr %i bytes]: \n\t[string]:%s\n\t[hex]%s:" % (len_cdr, cdr, str_cdr))
 
-        print "=== /Debugging %s ===" % (self.description)
+        print ("=== /Debugging %s ===" % (self.description))
 
     def work(self, input_items, output_items):
         pass
