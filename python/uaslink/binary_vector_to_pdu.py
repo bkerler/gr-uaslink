@@ -49,7 +49,7 @@ class binary_vector_to_pdu(gr.sync_block):
         meta = pmt.car(msg)
         data = pmt.to_python(pmt.cdr(msg))
 
-        print "\n=== vector_to_binary ==="
+        print ("\n=== vector_to_binary ===")
         data = data / 3  # scale from 0|3 to 0|1
         data = numpy.packbits(data)
         data = data.tobytes()
