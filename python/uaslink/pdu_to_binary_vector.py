@@ -47,8 +47,8 @@ class pdu_to_binary_vector(gr.sync_block):
         meta = pmt.car(msg)
         data = pmt.to_python(pmt.cdr(msg))
 
-        print "\n=== zmq_to_pdu_vector ==="
-        print '\tEncoding [%i] bytes: %s' % (len(data), self.string_to_hex(data))
+        print ("\n=== zmq_to_pdu_vector ===")
+        print ('\tEncoding [%i] bytes: %s' % (len(data), self.string_to_hex(data)))
 
         bufnp = numpy.unpackbits(numpy.fromstring(data, dtype=numpy.uint8))  # Convert to BPSK vectors of 0x00 or 0x01
         bufnp *= 3
